@@ -1,0 +1,101 @@
+.bar {
+  background: #0f0f0f;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.35);
+  align-self: flex-start;
+  max-width: 720px;
+  width: 100%;
+}
+
+.label::before {
+  content: '// ';
+  color: var(--red);
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+}
+
+.input {
+  flex: 1;
+  padding: 14px 18px;
+  background: #161616;
+  border: none;
+  outline: none;
+  font-family: var(--font-geist);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+}
+
+.input::placeholder {
+  color: rgba(245,245,240,0.2);
+  font-size: 13px;
+}
+
+.input:focus {
+  background: #1a1a1a;
+}
+
+.btn {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  background: var(--red);
+  color: var(--cream);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--red-hover);
+}
+
+@media (max-width: 768px) {
+  .bar {
+    padding: 24px 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    border-radius: 3px;
+  }
+
+  .btn {
+    padding: 14px;
+    text-align: center;
+  }
+
+  .label {
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bar {
+    padding: 32px 48px;
+  }
+}

@@ -1,0 +1,146 @@
+.section {
+  background: var(--bg);
+  padding: 72px 32px;
+}
+
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: var(--font-anton);
+  font-size: clamp(28px, 4vw, 42px);
+  text-transform: uppercase;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 280px 280px;
+  gap: 2px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Shared overlay */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.08) 100%);
+  transition: opacity 0.3s;
+}
+
+.card:hover::after {
+  opacity: 0.75;
+}
+
+/* Per-card photo backgrounds */
+.cardMecanica {
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80') center / cover no-repeat;
+}
+
+.cardElectronica {
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80') center / cover no-repeat;
+}
+
+.cardChapa {
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80') center / cover no-repeat;
+}
+
+.cardNeumaticos {
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80') center / cover no-repeat;
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardLabel {
+  font-family: var(--font-geist);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.45);
+}
+
+.cardTitle {
+  font-family: var(--font-anton);
+  font-size: clamp(20px, 2.5vw, 28px);
+  text-transform: uppercase;
+  color: var(--cream);
+  line-height: 1;
+  letter-spacing: -0.005em;
+}
+
+/* Hover reveal arrow */
+.cardArrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(245,245,240,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.card:hover .cardArrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 220px);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 80px 48px;
+  }
+
+  .grid {
+    grid-template-rows: 320px 320px;
+  }
+}

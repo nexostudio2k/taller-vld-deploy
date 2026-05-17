@@ -1,0 +1,122 @@
+.hero {
+  position: relative;
+  height: 100dvh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 32px 72px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(to bottom,
+      rgba(0,0,0,0.20) 0%,
+      rgba(0,0,0,0.50) 55%,
+      rgba(0,0,0,0.82) 100%),
+    url('https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=1920&q=80') center / cover no-repeat;
+}
+
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.tag {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.45);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tagDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+}
+
+.heading {
+  font-family: var(--font-anton);
+  font-size: clamp(52px, 8.5vw, 108px);
+  line-height: 0.93;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 40px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: var(--red);
+  color: var(--cream);
+  border-radius: 3px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btnPrimary:hover {
+  background: var(--red-hover);
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border: 1px solid rgba(245,245,240,0.22);
+  color: var(--cream);
+  border-radius: 3px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btnSecondary:hover {
+  border-color: var(--cream);
+  background: rgba(245,245,240,0.06);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 20px 56px;
+    min-height: 100dvh;
+  }
+
+  .heading {
+    font-size: clamp(44px, 12vw, 72px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 0 48px 80px;
+  }
+}

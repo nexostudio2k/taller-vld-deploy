@@ -1,0 +1,183 @@
+.section {
+  border-top: 1px solid var(--border);
+  padding: 96px 24px;
+}
+
+.inner {
+  max-width: 1216px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.label {
+  font-family: var(--font-geist);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.title {
+  font-family: var(--font-anton);
+  font-size: clamp(36px, 5vw, 56px);
+  text-transform: uppercase;
+  line-height: 0.95;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.infoIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background: var(--cream-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.infoLabel {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream-muted);
+}
+
+.infoValue {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldLabel {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream-muted);
+}
+
+.input,
+.textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  color: var(--cream);
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(245, 245, 240, 0.25);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--purple);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  background: var(--red);
+  color: var(--cream);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  border: none;
+  width: 100%;
+}
+
+.submit:hover {
+  background: var(--red-hover);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 600px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .submit {
+    width: auto;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 120px 48px;
+  }
+
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+}

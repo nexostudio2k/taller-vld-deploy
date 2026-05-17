@@ -1,0 +1,467 @@
+/* ── Hero ── */
+.hero {
+  background: var(--bg);
+  padding: 56px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.heroInner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.heroTag {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.35);
+  margin-bottom: 20px;
+  grid-column: 1 / -1;
+}
+
+.heroTag::before {
+  content: '// ';
+  color: var(--red);
+}
+
+/* Level card */
+.levelCard {
+  background: #0f0f0f;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.levelCardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.levelCardLabel {
+  font-family: var(--font-geist);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.35);
+}
+
+.levelBadge {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  background: rgba(168,85,247,0.15);
+  color: var(--purple);
+  border: 1px solid rgba(168,85,247,0.3);
+  border-radius: 3px;
+}
+
+.levelPts {
+  font-family: var(--font-anton);
+  font-size: 52px;
+  color: var(--cream);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.levelPtsLabel {
+  font-size: 0.38em;
+  color: var(--cream-muted);
+  letter-spacing: 0.12em;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+.levelProgress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressLabels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-geist);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.3);
+}
+
+.progressBar {
+  height: 3px;
+  background: #1f1f1f;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  width: 62%;
+  background: var(--purple);
+  border-radius: 2px;
+}
+
+.levelNext {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.28);
+}
+
+/* Membership levels */
+.membershipRight {}
+
+.membershipTitle {
+  font-family: var(--font-anton);
+  font-size: clamp(20px, 2.5vw, 28px);
+  text-transform: uppercase;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.membershipSub {
+  font-size: 13px;
+  color: var(--cream-muted);
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.levelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: 3px;
+  gap: 12px;
+  background: #0d0d0d;
+  border: 1px solid transparent;
+}
+
+.levelRowActive {
+  background: rgba(168,85,247,0.08);
+  border-color: rgba(168,85,247,0.25);
+}
+
+.levelRowLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.levelDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #333;
+  flex-shrink: 0;
+}
+
+.levelDotActive { background: var(--purple); }
+
+.levelName {
+  font-family: var(--font-geist);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.4);
+  width: 70px;
+}
+
+.levelNameActive { color: var(--cream); }
+
+.levelRange {
+  font-family: var(--font-geist);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: rgba(245,245,240,0.25);
+}
+
+.levelBenefits {
+  font-family: var(--font-geist);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: rgba(245,245,240,0.25);
+  text-align: right;
+}
+
+.levelBenefitsActive { color: var(--purple); }
+
+/* ── Earn Points Section (light) ── */
+.earnSection {
+  background: var(--cream);
+  padding: 64px 32px;
+  border-bottom: 1px solid #D4D4CE;
+}
+
+.earnInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.earnTag {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9CA3AF;
+  margin-bottom: 16px;
+}
+
+.earnTag::before {
+  content: '// ';
+  color: var(--red);
+}
+
+.earnHeading {
+  font-family: var(--font-anton);
+  font-size: clamp(32px, 5vw, 52px);
+  text-transform: uppercase;
+  color: #0D0D0D;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  margin-bottom: 40px;
+}
+
+.earnList {
+  display: flex;
+  flex-direction: column;
+}
+
+.earnRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #D4D4CE;
+  gap: 16px;
+}
+
+.earnRow:first-child { border-top: 1px solid #D4D4CE; }
+
+.earnRowLabel {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 400;
+}
+
+.earnRowPts {
+  font-family: var(--font-geist);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--red);
+  white-space: nowrap;
+}
+
+/* ── Movements Section (dark) ── */
+.movSection {
+  background: var(--surface);
+  padding: 64px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.movInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.movTag {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.35);
+  margin-bottom: 16px;
+}
+
+.movTag::before {
+  content: '// ';
+  color: var(--red);
+}
+
+.movHeading {
+  font-family: var(--font-anton);
+  font-size: clamp(28px, 4vw, 42px);
+  text-transform: uppercase;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+.movList {
+  display: flex;
+  flex-direction: column;
+}
+
+.movRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 16px;
+}
+
+.movRow:first-child { border-top: 1px solid var(--border); }
+
+.movLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.movLabel {
+  font-size: 14px;
+  color: var(--cream);
+  font-weight: 400;
+}
+
+.movDate {
+  font-family: var(--font-geist);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: rgba(245,245,240,0.3);
+}
+
+.movPts {
+  font-family: var(--font-geist);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.movPtsPos { color: #4ADE80; }
+.movPtsNeg { color: var(--red); }
+
+/* ── Redeem Section (light) ── */
+.redeemSection {
+  background: var(--cream);
+  padding: 64px 32px;
+}
+
+.redeemInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.redeemHeading {
+  font-family: var(--font-anton);
+  font-size: clamp(28px, 4vw, 42px);
+  text-transform: uppercase;
+  color: #0D0D0D;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+.redeemGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.redeemCard {
+  background: #0D0D0D;
+  border: 1px solid #1f1f1f;
+  border-radius: 4px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s;
+  cursor: pointer;
+}
+
+.redeemCard:hover { border-color: var(--purple); }
+
+.redeemPts {
+  font-family: var(--font-anton);
+  font-size: 32px;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.redeemPts span {
+  font-size: 0.5em;
+  color: var(--cream-muted);
+  letter-spacing: 0.1em;
+  margin-left: 2px;
+}
+
+.redeemDesc {
+  font-size: 13px;
+  color: var(--cream-muted);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.redeemBtn {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 0;
+  background: transparent;
+  color: var(--purple);
+  border: 1px solid rgba(168,85,247,0.35);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  text-align: center;
+}
+
+.redeemBtn:hover {
+  background: rgba(168,85,247,0.1);
+  border-color: var(--purple);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero { padding: 36px 20px; }
+  .heroInner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .heroTag { grid-column: 1; }
+
+  .earnSection { padding: 48px 20px; }
+  .movSection { padding: 48px 20px; }
+  .redeemSection { padding: 48px 20px; }
+
+  .redeemGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .levelRow { flex-wrap: wrap; gap: 8px; }
+  .levelRange { display: none; }
+}
+
+@media (min-width: 1024px) {
+  .hero { padding: 72px 48px; }
+  .earnSection { padding: 80px 48px; }
+  .movSection { padding: 80px 48px; }
+  .redeemSection { padding: 80px 48px; }
+}
