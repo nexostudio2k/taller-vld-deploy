@@ -172,6 +172,10 @@ export default function Seguimiento() {
 
   return (
     <>
+      <div className={s.backBar}>
+        <a href="/" className={s.backLink}>← VOLVER AL INICIO</a>
+      </div>
+
       <section className={s.searchSection}>
         <div className={s.searchInner}>
           <p className={s.searchTag}>Seguimiento de Reparación · Car Lab</p>
