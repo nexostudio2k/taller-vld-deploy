@@ -7,7 +7,7 @@ export default function CtaPortal() {
     <div className={s.strip}>
       <span className={s.label}>Portal del cliente</span>
       <h2 className={s.heading}>Sigue tu reparación en tiempo real</h2>
-      <Link to="/cliente/dashboard" className={s.btn}>
+      <Link to="/cliente" className={s.btn}>
         Acceder
         <ArrowRight size={14} strokeWidth={2.5} />
       </Link>
