@@ -1,5 +1,7 @@
 import { ArrowRight } from 'lucide-react'
+import ClienteNav from '../../components/ClienteNav/ClienteNav'
 import Footer from '../../components/Footer/Footer'
+import { useAuth } from '../../context/AuthContext'
 import s from './ClienteDashboard.module.css'
 
 const STEPS = [
@@ -18,40 +20,23 @@ const TIMELINE = [
   { time: '11:10', event: 'Inició la reparación', active: true },
 ]
 
-function ClienteNav() {
-  return (
-    <nav className={s.nav}>
-      <a href="/" className={s.navLogo}>
-        CAR LAB
-      </a>
-      <div className={s.navRight}>
-        <a href="/cliente/dashboard" className={`${s.navLink} ${s.navLinkActive}`}>
-          Mi Reparación
-        </a>
-        <a href="/cliente/historial" className={s.navLink}>Historial</a>
-        <a href="/cliente/puntos" className={s.navLink}>Puntos</a>
-        <a href="#" className={s.navUser}>Carlos R</a>
-        <button className={s.hamburger} aria-label="Menú">
-          <span /><span /><span />
-        </button>
-      </div>
-    </nav>
-  )
-}
-
 export default function ClienteDashboard() {
+  const { user } = useAuth()
+  const nombre = user?.nombre?.split(' ')[0] || 'Carlos'
+  const matricula = user?.matricula || '4567 XYZ'
+
   return (
     <>
-      <ClienteNav />
+      <ClienteNav active="dashboard" />
 
       {/* Welcome Hero */}
       <section className={s.welcome}>
         <div className={s.welcomeInner}>
           <p className={s.welcomeTag}>Portal del Cliente</p>
           <h1 className={s.welcomeHeading}>
-            Bienvenido,<br />Carlos
+            Bienvenido,<br />{nombre}
           </h1>
-          <span className={s.vehiclePill}>Seat Leon · 4567 XYZ</span>
+          <span className={s.vehiclePill}>Seat León · {matricula}</span>
         </div>
       </section>
 

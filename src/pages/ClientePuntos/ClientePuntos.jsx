@@ -1,5 +1,6 @@
 import ClienteNav from '../../components/ClienteNav/ClienteNav'
 import Footer from '../../components/Footer/Footer'
+import { useAuth } from '../../context/AuthContext'
 import s from './ClientePuntos.module.css'
 
 const LEVELS = [
@@ -43,6 +44,9 @@ const REDEEM = [
 ]
 
 export default function ClientePuntos() {
+  const { user } = useAuth()
+  const nombre = user?.nombre?.split(' ')[0] || 'Carlos'
+
   return (
     <>
       <ClienteNav active="puntos" />

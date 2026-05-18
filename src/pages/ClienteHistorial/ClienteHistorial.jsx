@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import ClienteNav from '../../components/ClienteNav/ClienteNav'
 import Footer from '../../components/Footer/Footer'
+import { useAuth } from '../../context/AuthContext'
 import s from './ClienteHistorial.module.css'
 
 const REPAIRS = [
@@ -31,13 +32,16 @@ const REPAIRS = [
 ]
 
 export default function ClienteHistorial() {
+  const { user } = useAuth()
+  const matricula = user?.matricula || '4567 XYZ'
+
   return (
     <>
       <ClienteNav active="historial" />
 
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <p className={s.heroTag}>Portal del Cliente · Seat Leon · 4567 XYZ</p>
+          <p className={s.heroTag}>Portal del Cliente · Seat León · {matricula}</p>
           <h1 className={s.heroHeading}>
             Historial de<br />Reparaciones
           </h1>

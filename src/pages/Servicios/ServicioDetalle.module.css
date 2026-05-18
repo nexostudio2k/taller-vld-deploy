@@ -1,0 +1,175 @@
+/* ── Hero ── */
+.hero {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 64px 32px 56px;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35);
+}
+
+.heroInner {
+  position: relative;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heroBack {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+
+.heroBack:hover { color: var(--cream-muted); }
+
+.heroNum {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.35);
+  margin-bottom: 12px;
+}
+
+.heroNum::before {
+  content: '// ';
+  color: var(--red);
+}
+
+.heroTitle {
+  font-family: var(--font-anton);
+  font-size: clamp(40px, 7vw, 80px);
+  text-transform: uppercase;
+  color: var(--cream);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+/* ── Price Table ── */
+.tableSection {
+  background: var(--surface);
+  padding: 64px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tableInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.tableTag {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.35);
+  margin-bottom: 32px;
+}
+
+.tableTag::before {
+  content: '// ';
+  color: var(--red);
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.tableRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 16px;
+}
+
+.tableService {
+  font-size: 15px;
+  color: var(--cream);
+  font-weight: 400;
+}
+
+.tableRange {
+  font-family: var(--font-geist);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--red);
+  white-space: nowrap;
+}
+
+/* ── CTA Section ── */
+.ctaSection {
+  background: var(--bg);
+  padding: 64px 32px;
+}
+
+.ctaInner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.ctaHeading {
+  font-family: var(--font-anton);
+  font-size: clamp(28px, 4vw, 48px);
+  text-transform: uppercase;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  background: var(--red);
+  color: var(--cream);
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.ctaBtn:hover { background: var(--red-hover); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero { padding: 48px 20px 40px; min-height: 260px; }
+  .tableSection { padding: 40px 20px; }
+  .ctaSection { padding: 40px 20px; }
+  .tableService { font-size: 14px; }
+}
+
+@media (min-width: 1024px) {
+  .hero { padding: 80px 48px 64px; min-height: 380px; }
+  .tableSection { padding: 80px 48px; }
+  .ctaSection { padding: 80px 48px; }
+}

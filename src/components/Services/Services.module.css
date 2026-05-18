@@ -29,6 +29,8 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  display: block;
+  text-decoration: none;
 }
 
 /* Shared overlay */
@@ -118,6 +120,24 @@
 }
 
 .card:hover .cardArrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardCta {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.6);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s, transform 0.3s;
+  margin-top: 6px;
+}
+
+.card:hover .cardCta {
   opacity: 1;
   transform: translateY(0);
 }

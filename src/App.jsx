@@ -13,6 +13,8 @@ import ClienteDashboard from './pages/ClienteDashboard/ClienteDashboard'
 import ClientePuntos from './pages/ClientePuntos/ClientePuntos'
 import Seguimiento from './pages/Seguimiento/Seguimiento'
 import ClienteHistorial from './pages/ClienteHistorial/ClienteHistorial'
+import ClienteLogin from './pages/ClienteLogin/ClienteLogin'
+import ServicioDetalle from './pages/Servicios/ServicioDetalle'
 
 export default function App() {
   return (
@@ -36,6 +38,8 @@ export default function App() {
       <Route path="/cliente/puntos" element={<ClientePuntos />} />
       <Route path="/seguimiento" element={<Seguimiento />} />
       <Route path="/cliente/historial" element={<ClienteHistorial />} />
+      <Route path="/cliente" element={<ClienteLogin />} />
+      <Route path="/servicios/:slug" element={<ServicioDetalle />} />
     </Routes>
   )
 }

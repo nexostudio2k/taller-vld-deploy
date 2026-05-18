@@ -1,14 +1,18 @@
 import { useState } from 'react'
+import { useAuth } from '../../context/AuthContext'
 import s from './Navbar.module.css'
-
-const NAV_LINKS = [
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Presupuesto', href: '/presupuesto' },
-  { label: 'Mi Portal', href: '/cliente/dashboard' },
-]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const { user } = useAuth()
+
+  const portalHref = user ? '/cliente/dashboard' : '/cliente'
+
+  const NAV_LINKS = [
+    { label: 'Servicios', href: '#servicios' },
+    { label: 'Presupuesto', href: '/presupuesto' },
+    { label: 'Mi Portal', href: portalHref },
+  ]
 
   return (
     <>
