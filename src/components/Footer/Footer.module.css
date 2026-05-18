@@ -97,12 +97,12 @@
 }
 
 .icons a {
-  color: rgba(245,245,240,0.35);
+  color: #B8B8B8;
   transition: color 0.2s;
 }
 
 .icons a:hover {
-  color: var(--cream);
+  color: #FFFFFF;
 }
 
 /* ── Bottom bar ── */

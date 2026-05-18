@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom'
-import { Camera, MessageCircle, MapPin } from 'lucide-react'
+import { MessageCircle, MapPin } from 'lucide-react'
 import s from './Footer.module.css'
+
+function InstagramIcon({ size = 22 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -35,9 +45,9 @@ export default function Footer() {
           <span className={s.colLabel} style={{ marginTop: 20 }}>Horario</span>
           <span className={s.hours}>LUN–VIE 08:00–19:00 · SAB 09:00–14:00</span>
           <div className={s.icons}>
-            <a href="#" aria-label="Instagram"><Camera size={18} strokeWidth={1.5} /></a>
-            <a href="#" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.5} /></a>
-            <a href="#" aria-label="Google Maps"><MapPin size={18} strokeWidth={1.5} /></a>
+            <a href="https://instagram.com/carlab" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstagramIcon size={22} /></a>
+            <a href="https://wa.me/34983123456" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={22} strokeWidth={1.5} /></a>
+            <a href="https://maps.google.com/?q=Calle+Esperanza+12+Valladolid" target="_blank" rel="noopener noreferrer" aria-label="Google Maps"><MapPin size={22} strokeWidth={1.5} /></a>
           </div>
         </div>
 
