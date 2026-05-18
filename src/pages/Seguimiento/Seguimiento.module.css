@@ -1,0 +1,421 @@
+/* ── Search Section ── */
+.searchSection {
+  background: var(--bg);
+  padding: 64px 32px 56px;
+  border-bottom: 1px solid var(--border);
+}
+
+.searchInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.searchTag {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.35);
+  margin-bottom: 18px;
+}
+
+.searchTag::before {
+  content: '// ';
+  color: var(--red);
+}
+
+.searchHeading {
+  font-family: var(--font-anton);
+  font-size: clamp(36px, 6vw, 72px);
+  text-transform: uppercase;
+  color: var(--cream);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin-bottom: 36px;
+}
+
+.searchRow {
+  display: flex;
+  max-width: 600px;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 16px 20px;
+  background: #0f0f0f;
+  border: none;
+  outline: none;
+  font-family: var(--font-geist);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  transition: background 0.2s;
+}
+
+.searchInput::placeholder {
+  color: rgba(245,245,240,0.2);
+}
+
+.searchInput:focus {
+  background: #141414;
+}
+
+.searchBtn {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  background: var(--red);
+  color: var(--cream);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.searchBtn:hover {
+  background: var(--red-hover);
+}
+
+.searchHint {
+  margin-top: 12px;
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.25);
+}
+
+.searchHint::before {
+  content: '// ';
+  color: rgba(245,245,240,0.15);
+}
+
+/* ── Result Section ── */
+.resultSection {
+  background: var(--surface);
+  padding: 56px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.resultInner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header row: ref badge + status badge */
+.resultHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.refBadge {
+  font-family: var(--font-geist);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 7px 16px;
+  background: #1a1a1a;
+  color: var(--cream-muted);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+.statusBadge {
+  font-family: var(--font-geist);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.statusRed    { background: rgba(200,16,46,0.15);  color: #F87171; border: 1px solid rgba(200,16,46,0.3); }
+.statusGreen  { background: rgba(22,163,74,0.15);  color: #4ADE80; border: 1px solid rgba(22,163,74,0.3); }
+.statusAmber  { background: rgba(245,158,11,0.15); color: #FCD34D; border: 1px solid rgba(245,158,11,0.3); }
+.statusDefault{ background: rgba(255,255,255,0.06); color: var(--cream-muted); border: 1px solid var(--border); }
+
+/* Title + vehicle */
+.resultTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.resultHeading {
+  font-family: var(--font-anton);
+  font-size: clamp(24px, 3.5vw, 40px);
+  text-transform: uppercase;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.resultVehicle {
+  font-family: var(--font-geist);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+/* Step progress bar */
+.stepBar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 4px;
+}
+
+.stepTrack {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background: #1f1f1f;
+}
+
+.stepFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.stepFillRed    { background: var(--red); }
+.stepFillGreen  { background: #16A34A; }
+.stepFillAmber  { background: #F59E0B; }
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+  flex: 1;
+}
+
+.stepCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-geist);
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+  border: 2px solid transparent;
+}
+
+.stepDone {
+  background: #1f1f1f;
+  color: rgba(245,245,240,0.4);
+  border-color: #333;
+}
+
+.stepActiveRed    { background: var(--red);   color: #fff; border-color: var(--red); }
+.stepActiveGreen  { background: #16A34A; color: #fff; border-color: #16A34A; }
+.stepActiveAmber  { background: #F59E0B; color: #1a1a1a; border-color: #F59E0B; }
+
+.stepPending {
+  background: transparent;
+  color: rgba(245,245,240,0.2);
+  border-color: #222;
+}
+
+.stepLabel {
+  font-family: var(--font-geist);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.3);
+  text-align: center;
+  line-height: 1.3;
+  max-width: 64px;
+}
+
+.stepLabelActive {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+/* Info grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.infoCell {
+  background: #0f0f0f;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.infoCellLabel {
+  font-family: var(--font-geist);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.28);
+}
+
+.infoCellValue {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+/* Description */
+.resultDesc {
+  font-size: 14px;
+  color: var(--cream-muted);
+  line-height: 1.6;
+  padding: 20px;
+  background: #0a0a0a;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  border-left: 3px solid var(--red);
+}
+
+.resultDescGreen { border-left-color: #16A34A; }
+.resultDescAmber { border-left-color: #F59E0B; }
+
+/* CTAs */
+.resultActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btnPortal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  background: var(--red);
+  color: var(--cream);
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.btnPortal:hover { background: var(--red-hover); }
+
+.btnPresupuesto {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--cream-muted);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btnPresupuesto:hover {
+  border-color: rgba(245,245,240,0.4);
+  color: var(--cream);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .searchSection {
+    padding: 44px 20px 40px;
+  }
+
+  .searchRow {
+    flex-direction: column;
+    border-radius: 3px;
+  }
+
+  .searchInput {
+    border-radius: 3px 3px 0 0;
+  }
+
+  .searchBtn {
+    padding: 14px;
+    text-align: center;
+    border-radius: 0 0 3px 3px;
+  }
+
+  .resultSection {
+    padding: 40px 20px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .stepLabel {
+    font-size: 8px;
+    max-width: 48px;
+  }
+
+  .stepCircle {
+    width: 26px;
+    height: 26px;
+    font-size: 10px;
+  }
+
+  .stepTrack {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+  }
+
+  .resultActions {
+    flex-direction: column;
+  }
+
+  .btnPortal,
+  .btnPresupuesto {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .searchSection {
+    padding: 80px 48px 72px;
+  }
+
+  .resultSection {
+    padding: 72px 48px;
+  }
+}

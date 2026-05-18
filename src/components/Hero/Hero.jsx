@@ -21,7 +21,7 @@ export default function Hero() {
             Pedir Presupuesto
             <ArrowRight size={14} strokeWidth={2.5} />
           </Link>
-          <Link to="/cliente/dashboard" className={s.btnSecondary}>
+          <Link to="/seguimiento" className={s.btnSecondary}>
             Ver mi reparación
           </Link>
         </div>
