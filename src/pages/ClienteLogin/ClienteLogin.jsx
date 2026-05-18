@@ -35,6 +35,10 @@ export default function ClienteLogin() {
 
   return (
     <>
+      <div className={s.backBar}>
+        <a href="/" className={s.backLink}>← VOLVER AL INICIO</a>
+      </div>
+
       <section className={s.hero}>
         <div className={s.heroInner}>
           <p className={s.heroTag}>Portal del Cliente · Car Lab</p>

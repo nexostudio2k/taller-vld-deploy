@@ -1,3 +1,21 @@
+/* ── Back link ── */
+.backBar {
+  padding: 16px 32px;
+  background: var(--bg);
+}
+
+.backLink {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  transition: color 0.2s;
+}
+
+.backLink:hover { color: var(--cream); }
+
 /* ── Hero ── */
 .hero {
   background: var(--bg);
@@ -153,6 +171,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  .backBar { padding: 14px 20px; }
   .hero { padding: 44px 20px 40px; }
   .formSection { padding: 40px 20px 64px; }
 }
