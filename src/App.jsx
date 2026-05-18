@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './index.css'
+import LoadingScreen from './components/LoadingScreen/LoadingScreen'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import MatriculaBar from './components/MatriculaBar/MatriculaBar'
@@ -18,6 +20,15 @@ import ServicioDetalle from './pages/Servicios/ServicioDetalle'
 import Contacto from './pages/Contacto/Contacto'
 
 export default function App() {
+  const [loading, setLoading] = useState(() => !sessionStorage.getItem('loaded'))
+
+  function handleDone() {
+    sessionStorage.setItem('loaded', '1')
+    setLoading(false)
+  }
+
+  if (loading) return <LoadingScreen onDone={handleDone} />
+
   return (
     <Routes>
       <Route path="/" element={
