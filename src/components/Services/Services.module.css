@@ -8,6 +8,16 @@
   margin: 0 auto;
 }
 
+.caption {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 12px;
+}
+
 .heading {
   font-family: var(--font-anton);
   font-size: clamp(28px, 4vw, 42px);
@@ -50,25 +60,25 @@
 .cardMecanica {
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80') center / cover no-repeat;
+    url('https://images.unsplash.com/photo-1632823471565-1ecdf5c6da12?w=800&q=80') center / cover no-repeat;
 }
 
 .cardElectronica {
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80') center / cover no-repeat;
+    url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80') center / cover no-repeat;
 }
 
 .cardChapa {
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80') center / cover no-repeat;
+    url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&q=80') center / cover no-repeat;
 }
 
 .cardNeumaticos {
   background:
     linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80') center / cover no-repeat;
+    url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80') center / cover no-repeat;
 }
 
 .cardContent {
@@ -83,12 +93,12 @@
   gap: 4px;
 }
 
-.cardLabel {
-  font-family: var(--font-geist);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(245,245,240,0.45);
+.cardNum {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--purple);
 }
 
 .cardTitle {
@@ -124,23 +134,6 @@
   transform: translateY(0);
 }
 
-.cardCta {
-  font-family: var(--font-inter);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(245,245,240,0.6);
-  opacity: 0;
-  transform: translateY(4px);
-  transition: opacity 0.3s, transform 0.3s;
-  margin-top: 6px;
-}
-
-.card:hover .cardCta {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 @media (max-width: 600px) {
   .grid {

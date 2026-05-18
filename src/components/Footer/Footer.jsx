@@ -1,3 +1,4 @@
+import { Camera, MessageCircle, MapPin } from 'lucide-react'
 import s from './Footer.module.css'
 
 export default function Footer() {
@@ -6,20 +7,39 @@ export default function Footer() {
   return (
     <footer className={s.footer}>
       <div className={s.top}>
-        <div className={s.brand}>
-          <span className={s.logo}>Car Lab</span>
-          <span className={s.address}>Calle Industria 47, Valladolid 47009</span>
-          <span className={s.hours}>Lun–Vie 08:00–20:00 · Sáb 09:00–14:00</span>
+
+        {/* Left */}
+        <div className={s.col}>
+          <span className={s.logo}>CAR LAB</span>
+          <span className={s.address}>Calle Esperanza, 12 · 47001 Valladolid, España</span>
+          <span className={s.since}>Taller oficial certificado desde 2005</span>
         </div>
 
-        <div className={s.right}>
-          <span className={s.phone}>+34 983 000 000</span>
-          <nav className={s.footerNav}>
-            <a href="#servicios">Servicios</a>
-            <a href="/matricula">Presupuesto</a>
-            <a href="#contacto" id="contacto">Contacto</a>
+        {/* Center */}
+        <div className={s.col}>
+          <span className={s.colLabel}>Navegación</span>
+          <nav className={s.navLinks}>
+            <a href="/">Inicio</a>
+            <a href="/presupuesto">Presupuesto</a>
+            <a href="/matricula">Matrícula</a>
+            <a href="/cliente">Portal Cliente</a>
+            <a href="/#contacto" id="contacto">Contacto</a>
           </nav>
         </div>
+
+        {/* Right */}
+        <div className={s.col}>
+          <span className={s.colLabel}>Contacto</span>
+          <span className={s.phone}>+34 983 123 456</span>
+          <span className={s.colLabel} style={{ marginTop: 20 }}>Horario</span>
+          <span className={s.hours}>LUN–VIE 08:00–19:00 · SAB 09:00–14:00</span>
+          <div className={s.icons}>
+            <a href="#" aria-label="Instagram"><Camera size={18} strokeWidth={1.5} /></a>
+            <a href="#" aria-label="WhatsApp"><MessageCircle size={18} strokeWidth={1.5} /></a>
+            <a href="#" aria-label="Google Maps"><MapPin size={18} strokeWidth={1.5} /></a>
+          </div>
+        </div>
+
       </div>
 
       <div className={s.bottom}>
