@@ -12,6 +12,7 @@ import Presupuesto from './pages/Presupuesto/Presupuesto'
 import ClienteDashboard from './pages/ClienteDashboard/ClienteDashboard'
 import ClientePuntos from './pages/ClientePuntos/ClientePuntos'
 import Seguimiento from './pages/Seguimiento/Seguimiento'
+import ClienteHistorial from './pages/ClienteHistorial/ClienteHistorial'
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
       <Route path="/cliente/dashboard" element={<ClienteDashboard />} />
       <Route path="/cliente/puntos" element={<ClientePuntos />} />
       <Route path="/seguimiento" element={<Seguimiento />} />
+      <Route path="/cliente/historial" element={<ClienteHistorial />} />
     </Routes>
   )
 }

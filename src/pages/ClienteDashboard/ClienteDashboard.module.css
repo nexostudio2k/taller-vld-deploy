@@ -85,7 +85,6 @@
 .welcome {
   background: var(--bg);
   padding: 48px 32px 52px;
-  border-bottom: 1px solid var(--border);
 }
 
 .welcomeInner {
@@ -114,28 +113,22 @@
   color: var(--cream);
   line-height: 0.95;
   letter-spacing: -0.01em;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .vehiclePill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   font-family: var(--font-geist);
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--purple);
-  padding: 6px 14px;
-  border: 1px solid rgba(168,85,247,0.3);
-  border-radius: 3px;
 }
 
 /* ── Active Repair Section ── */
 .repairSection {
-  background: var(--surface);
+  background: var(--cream);
   padding: 56px 32px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #D4D4CE;
 }
 
 .repairInner {
@@ -164,7 +157,7 @@
   font-family: var(--font-anton);
   font-size: clamp(20px, 2.8vw, 30px);
   text-transform: uppercase;
-  color: var(--cream);
+  color: #0D0D0D;
   letter-spacing: -0.01em;
   line-height: 1.05;
   margin-bottom: 8px;
@@ -172,7 +165,7 @@
 
 .repairDesc {
   font-size: 13px;
-  color: var(--cream-muted);
+  color: #555;
   margin-bottom: 28px;
 }
 
@@ -191,25 +184,26 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 8px 14px;
-  border-radius: 3px;
+  border-radius: 20px;
   border: 1px solid transparent;
 }
 
 .stepDone {
-  background: #1a1a1a;
-  color: rgba(245,245,240,0.4);
-  border-color: #2a2a2a;
+  background: #e5e5e0;
+  color: #888;
+  border-color: #d0d0ca;
 }
 
 .stepActive {
-  background: var(--red);
-  color: var(--cream);
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
 }
 
 .stepPending {
   background: transparent;
-  color: rgba(245,245,240,0.3);
-  border-color: #2a2a2a;
+  color: #aaa;
+  border-color: #d0d0ca;
 }
 
 .repairMeta {
@@ -219,23 +213,24 @@
   font-family: var(--font-geist);
   font-size: 11px;
   letter-spacing: 0.08em;
-  color: var(--cream-muted);
+  color: #555;
 }
 
 .repairMeta strong {
-  color: var(--cream);
-  font-weight: 500;
+  color: #0D0D0D;
+  font-weight: 600;
 }
 
 /* Status card */
 .statusCard {
-  background: #0f0f0f;
-  border: 1px solid var(--border);
+  background: #fff;
+  border: 1px solid #E5E5E0;
   border-radius: 4px;
   padding: 28px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
 .statusCardLabel {
@@ -243,14 +238,14 @@
   font-size: 9px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(245,245,240,0.35);
+  color: rgba(0,0,0,0.35);
 }
 
 .statusValue {
   font-family: var(--font-anton);
-  font-size: 26px;
+  font-size: clamp(24px, 3vw, 36px);
   text-transform: uppercase;
-  color: #4ADE80;
+  color: var(--purple);
   letter-spacing: -0.01em;
   line-height: 1;
 }
@@ -259,15 +254,15 @@
   font-family: var(--font-geist);
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: var(--cream-muted);
+  color: #555;
 }
 
 .statusDesc {
   font-size: 13px;
-  color: var(--cream-muted);
+  color: #555;
   line-height: 1.55;
-  padding-top: 4px;
-  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  border-top: 1px solid #E5E5E0;
 }
 
 .statusAutoUpdate {
@@ -275,13 +270,13 @@
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(245,245,240,0.22);
+  color: #999;
 }
 
 .statusAutoUpdate::before {
   content: '// ';
-  color: #4ADE80;
-  opacity: 0.6;
+  color: var(--purple);
+  opacity: 0.7;
 }
 
 /* ── Activity Section ── */
@@ -339,7 +334,7 @@
 
 .timelineItemActive {
   padding-left: 12px;
-  border-left: 2px solid var(--red);
+  border-left: 2px solid var(--purple);
   margin-left: -12px;
 }
 
@@ -380,11 +375,11 @@
   border-radius: 2px;
 }
 
-/* ── Taller Points ── */
+/* ── Car Lab Points ── */
 .pointsSection {
-  background: var(--surface);
+  background: var(--cream);
   padding: 56px 32px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #D4D4CE;
 }
 
 .pointsInner {
@@ -401,7 +396,7 @@
   font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(245,245,240,0.35);
+  color: #888;
   margin-bottom: 12px;
 }
 
@@ -413,7 +408,7 @@
 .pointsCount {
   font-family: var(--font-anton);
   font-size: clamp(36px, 5vw, 56px);
-  color: var(--cream);
+  color: #0D0D0D;
   letter-spacing: -0.02em;
   line-height: 1;
   margin-bottom: 16px;
@@ -421,13 +416,13 @@
 
 .pointsCount span {
   font-size: 0.5em;
-  color: var(--cream-muted);
+  color: #666;
   letter-spacing: 0.1em;
 }
 
 .progressBar {
   height: 4px;
-  background: #1f1f1f;
+  background: #D4D4CE;
   border-radius: 2px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -436,7 +431,7 @@
 .progressFill {
   height: 100%;
   width: 62%;
-  background: var(--red);
+  background: var(--purple);
   border-radius: 2px;
 }
 
@@ -445,7 +440,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(245,245,240,0.35);
+  color: #888;
 }
 
 .pointsRight {
@@ -458,13 +453,13 @@
   font-family: var(--font-anton);
   font-size: clamp(18px, 2.5vw, 26px);
   text-transform: uppercase;
-  color: var(--cream);
+  color: #0D0D0D;
   letter-spacing: -0.01em;
 }
 
 .levelDesc {
   font-size: 13px;
-  color: var(--cream-muted);
+  color: #555;
   line-height: 1.6;
 }
 
@@ -478,16 +473,16 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 11px 20px;
-  border: 1px solid var(--border);
-  color: var(--cream);
+  border: 1px solid #C0C0BA;
+  color: #0D0D0D;
   border-radius: 3px;
   transition: border-color 0.2s, background 0.2s;
   width: fit-content;
 }
 
 .levelCta:hover {
-  border-color: rgba(245,245,240,0.4);
-  background: rgba(245,245,240,0.04);
+  border-color: #888;
+  background: rgba(0,0,0,0.04);
 }
 
 /* ── Responsive ── */
@@ -518,7 +513,7 @@
   }
 
   .steps { gap: 3px; }
-  .step { font-size: 9px; padding: 7px 10px; }
+  .step { font-size: 9px; padding: 6px 10px; }
 }
 
 @media (min-width: 1024px) {

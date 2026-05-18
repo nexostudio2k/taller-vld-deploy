@@ -28,7 +28,7 @@ function ClienteNav() {
         <a href="/cliente/dashboard" className={`${s.navLink} ${s.navLinkActive}`}>
           Mi Reparación
         </a>
-        <a href="#" className={s.navLink}>Historial</a>
+        <a href="/cliente/historial" className={s.navLink}>Historial</a>
         <a href="/cliente/puntos" className={s.navLink}>Puntos</a>
         <a href="#" className={s.navUser}>Carlos R</a>
         <button className={s.hamburger} aria-label="Menú">

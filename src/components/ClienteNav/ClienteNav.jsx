@@ -6,7 +6,7 @@ export default function ClienteNav({ active }) {
 
   const links = [
     { label: 'Mi Reparación', href: '/cliente/dashboard', key: 'dashboard' },
-    { label: 'Historial',     href: '#',                   key: 'historial' },
+    { label: 'Historial',     href: '/cliente/historial',   key: 'historial' },
     { label: 'Puntos',        href: '/cliente/puntos',      key: 'puntos' },
   ]
 

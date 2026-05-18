@@ -1,0 +1,166 @@
+/* ── Hero ── */
+.hero {
+  background: var(--bg);
+  padding: 56px 32px 52px;
+  border-bottom: 1px solid var(--border);
+}
+
+.heroInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.heroTag {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.35);
+  margin-bottom: 16px;
+}
+
+.heroTag::before {
+  content: '// ';
+  color: var(--red);
+}
+
+.heroHeading {
+  font-family: var(--font-anton);
+  font-size: clamp(32px, 5.5vw, 64px);
+  text-transform: uppercase;
+  color: var(--cream);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+
+/* ── List Section ── */
+.listSection {
+  background: var(--surface);
+  padding: 56px 32px;
+}
+
+.listInner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.listHeader {
+  display: grid;
+  grid-template-columns: 120px 1fr 100px 140px 120px;
+  gap: 16px;
+  padding: 0 20px 12px;
+  font-family: var(--font-geist);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.28);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+
+.repairRow {
+  display: grid;
+  grid-template-columns: 120px 1fr 100px 140px 120px;
+  gap: 16px;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+
+.repairRow:hover {
+  background: rgba(245,245,240,0.03);
+}
+
+.repairDate {
+  font-family: var(--font-geist);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: rgba(245,245,240,0.4);
+  white-space: nowrap;
+}
+
+.repairType {
+  font-size: 14px;
+  color: var(--cream);
+  font-weight: 400;
+}
+
+.repairRef {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: rgba(245,245,240,0.3);
+  margin-top: 3px;
+}
+
+.repairCost {
+  font-family: var(--font-geist);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--cream);
+}
+
+.completedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-geist);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background: rgba(22,163,74,0.15);
+  color: #4ADE80;
+  border: 1px solid rgba(74,222,128,0.25);
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.detailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream-muted);
+  transition: color 0.2s;
+}
+
+.detailLink:hover {
+  color: var(--cream);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero { padding: 36px 20px 40px; }
+  .listSection { padding: 36px 20px; }
+
+  .listHeader { display: none; }
+
+  .repairRow {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 20px 0;
+    border-radius: 0;
+  }
+
+  .repairRow:hover { background: none; }
+
+  .repairDate {
+    font-size: 11px;
+    color: rgba(245,245,240,0.3);
+  }
+
+  .repairCost { font-size: 13px; }
+}
+
+@media (min-width: 1024px) {
+  .hero { padding: 72px 48px 64px; }
+  .listSection { padding: 72px 48px; }
+}
