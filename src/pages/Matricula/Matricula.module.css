@@ -274,12 +274,12 @@
 }
 
 .vehicleImg {
-  height: 200px;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center center;
   border-radius: 4px;
-  background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    center / cover no-repeat;
-  flex-shrink: 0;
+  display: block;
 }
 
 .resultInfo {
@@ -549,7 +549,7 @@
   }
 
   .vehicleImg {
-    height: 160px;
+    height: 240px;
   }
 
   .nav {

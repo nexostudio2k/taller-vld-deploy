@@ -7,31 +7,31 @@ const VEHICLES = [
     name: 'Volkswagen Golf',
     spec: '2.0 TDI · 150 CV · 2018',
     detail: 'Diesel · Hatchback · 1968 cc',
-    img: 'https://images.unsplash.com/photo-1471444928139-48c5bf5173f8?w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1590362891991-f776e747a588?w=600&q=80',
   },
   {
     name: 'Seat León',
     spec: '1.5 TSI · 130 CV · 2019',
     detail: 'Gasolina · Hatchback · 1498 cc',
-    img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?w=600&q=80',
   },
   {
     name: 'Toyota Corolla',
     spec: '1.8 Hybrid · 122 CV · 2020',
     detail: 'Híbrido · Sedan · 1798 cc',
-    img: 'https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=80',
   },
   {
     name: 'Renault Megane',
     spec: '1.5 dCi · 110 CV · 2017',
     detail: 'Diesel · Hatchback · 1461 cc',
-    img: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&q=80',
   },
   {
     name: 'Ford Focus',
     spec: '1.0 EcoBoost · 125 CV · 2021',
     detail: 'Gasolina · Hatchback · 999 cc',
-    img: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1612544448445-b8232cff3b6c?w=600&q=80',
   },
 ]
 
@@ -126,9 +126,10 @@ function ResultSection({ plate, vehicle }) {
       <section className={s.resultSection}>
         <div className={s.resultInner}>
           <div className={s.resultRow}>
-            <div
+            <img
               className={s.vehicleImg}
-              style={{ backgroundImage: `url('${vehicle.img}')` }}
+              src={vehicle.img}
+              alt={vehicle.name}
             />
             <div className={s.resultInfo}>
               <div className={s.badges}>
