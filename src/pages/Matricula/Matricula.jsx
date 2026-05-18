@@ -2,11 +2,42 @@ import { useState } from 'react'
 import { Check } from 'lucide-react'
 import s from './Matricula.module.css'
 
-const MOCK_VEHICLE = {
-  plate: '1234 ABC',
-  name: 'Volkswagen Golf',
-  spec: '2.0 TDI · 150 CV · 2018',
-  detail: 'Diesel · Hatchback · 1968 cc',
+const VEHICLES = [
+  {
+    name: 'Volkswagen Golf',
+    spec: '2.0 TDI · 150 CV · 2018',
+    detail: 'Diesel · Hatchback · 1968 cc',
+    img: 'https://images.unsplash.com/photo-1471444928139-48c5bf5173f8?w=600&q=80',
+  },
+  {
+    name: 'Seat León',
+    spec: '1.5 TSI · 130 CV · 2019',
+    detail: 'Gasolina · Hatchback · 1498 cc',
+    img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80',
+  },
+  {
+    name: 'Toyota Corolla',
+    spec: '1.8 Hybrid · 122 CV · 2020',
+    detail: 'Híbrido · Sedan · 1798 cc',
+    img: 'https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=600&q=80',
+  },
+  {
+    name: 'Renault Megane',
+    spec: '1.5 dCi · 110 CV · 2017',
+    detail: 'Diesel · Hatchback · 1461 cc',
+    img: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=600&q=80',
+  },
+  {
+    name: 'Ford Focus',
+    spec: '1.0 EcoBoost · 125 CV · 2021',
+    detail: 'Gasolina · Hatchback · 999 cc',
+    img: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80',
+  },
+]
+
+function pickVehicle(plate) {
+  const sum = plate.split('').reduce((acc, ch) => acc + ch.charCodeAt(0), 0)
+  return VEHICLES[sum % VEHICLES.length]
 }
 
 const BRANDS = ['Abarth','Alfa Romeo','Audi','BMW','Chevrolet','Citroën','Dacia','Fiat','Ford','Honda','Hyundai','Kia','Mazda','Mercedes-Benz','MINI','Mitsubishi','Nissan','Opel','Peugeot','Renault','SEAT','Skoda','Suzuki','Toyota','Volkswagen','Volvo']
@@ -94,16 +125,24 @@ function ResultSection({ plate, vehicle }) {
       <div className={s.divider} />
       <section className={s.resultSection}>
         <div className={s.resultInner}>
-          <div className={s.badges}>
-            <span className={s.plateBadge}>{plate}</span>
-            <span className={s.statusBadge}>
-              <Check size={12} strokeWidth={3} />
-              Vehículo Localizado
-            </span>
+          <div className={s.resultRow}>
+            <div
+              className={s.vehicleImg}
+              style={{ backgroundImage: `url('${vehicle.img}')` }}
+            />
+            <div className={s.resultInfo}>
+              <div className={s.badges}>
+                <span className={s.plateBadge}>{plate}</span>
+                <span className={s.statusBadge}>
+                  <Check size={12} strokeWidth={3} />
+                  Vehículo Localizado
+                </span>
+              </div>
+              <h2 className={s.vehicleName}>{vehicle.name}</h2>
+              <p className={s.vehicleSpec}>{vehicle.spec}</p>
+              <p className={s.vehicleDetail}>{vehicle.detail}</p>
+            </div>
           </div>
-          <h2 className={s.vehicleName}>{vehicle.name}</h2>
-          <p className={s.vehicleSpec}>{vehicle.spec}</p>
-          <p className={s.vehicleDetail}>{vehicle.detail}</p>
         </div>
       </section>
       <div className={s.divider} />
@@ -195,14 +234,7 @@ export default function Matricula() {
   const [result, setResult] = useState(null) // null | { plate, vehicle } | { plate, vehicle: null }
 
   function handleSearch(plate) {
-    // Normalize: strip spaces for comparison
-    const normalized = plate.replace(/\s+/g, '')
-    const mockNorm = MOCK_VEHICLE.plate.replace(/\s+/g, '')
-    if (normalized === mockNorm) {
-      setResult({ plate, vehicle: MOCK_VEHICLE })
-    } else {
-      setResult({ plate, vehicle: null })
-    }
+    setResult({ plate, vehicle: pickVehicle(plate) })
   }
 
   return (
