@@ -15,6 +15,7 @@ import Seguimiento from './pages/Seguimiento/Seguimiento'
 import ClienteHistorial from './pages/ClienteHistorial/ClienteHistorial'
 import ClienteLogin from './pages/ClienteLogin/ClienteLogin'
 import ServicioDetalle from './pages/Servicios/ServicioDetalle'
+import Contacto from './pages/Contacto/Contacto'
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
       <Route path="/cliente/historial" element={<ClienteHistorial />} />
       <Route path="/cliente" element={<ClienteLogin />} />
       <Route path="/servicios/:slug" element={<ServicioDetalle />} />
+      <Route path="/contacto" element={<Contacto />} />
     </Routes>
   )
 }

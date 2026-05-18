@@ -26,7 +26,7 @@ export default function Navbar() {
         </div>
 
         <div className={s.navRight}>
-          <a href="/#contacto" className={s.cta}>Contacto</a>
+          <a href="/contacto" className={s.cta}>Contacto</a>
           <button
             className={`${s.hamburger} ${open ? s.open : ''}`}
             onClick={() => setOpen(v => !v)}
@@ -41,7 +41,7 @@ export default function Navbar() {
         {NAV_LINKS.map(({ label, href }) => (
           <a key={label} href={href} onClick={() => setOpen(false)}>{label}</a>
         ))}
-        <a href="/#contacto" className={s.mobileCta} onClick={() => setOpen(false)}>Contacto</a>
+        <a href="/contacto" className={s.mobileCta} onClick={() => setOpen(false)}>Contacto</a>
       </div>
     </>
   )
