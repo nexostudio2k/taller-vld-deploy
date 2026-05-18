@@ -6,12 +6,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const { user } = useAuth()
 
-  const portalHref = user ? '/cliente/dashboard' : '/cliente'
-
   const NAV_LINKS = [
     { label: 'Servicios', href: '#servicios' },
     { label: 'Presupuesto', href: '/presupuesto' },
-    { label: 'Mi Portal', href: portalHref },
+    { label: 'Mi Portal', href: '/cliente' },
   ]
 
   return (
