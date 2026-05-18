@@ -94,7 +94,7 @@ export default function Presupuesto() {
           <div className={s.desgloseHeader}>
             <h2 className={s.desgloseTitle}>Desglose estimado</h2>
             <div className={s.desgloseMeta}>
-              <span className={s.desgloseShop}>Taller VLD</span>
+              <span className={s.desgloseShop}>Car Lab</span>
               <span className={s.desgloseTotal}>
                 Estimación total: <span>180€ – 339€</span>
               </span>

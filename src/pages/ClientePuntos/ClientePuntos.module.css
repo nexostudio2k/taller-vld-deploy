@@ -2,7 +2,6 @@
 .hero {
   background: var(--bg);
   padding: 56px 32px;
-  border-bottom: 1px solid var(--border);
 }
 
 .heroInner {
@@ -20,7 +19,7 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(245,245,240,0.35);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   grid-column: 1 / -1;
 }
 
@@ -29,29 +28,119 @@
   color: var(--red);
 }
 
-/* Level card */
-.levelCard {
-  background: #0f0f0f;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 28px;
+.heroHeading {
+  font-family: var(--font-anton);
+  font-size: clamp(36px, 5vw, 64px);
+  text-transform: uppercase;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  margin-bottom: 20px;
+  grid-column: 1 / -1;
+}
+
+.heroBadgeRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  grid-column: 1 / -1;
+  flex-wrap: wrap;
+}
+
+.heroBadge {
+  font-family: var(--font-geist);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  background: rgba(168,85,247,0.15);
+  color: var(--purple);
+  border: 1px solid rgba(168,85,247,0.3);
+  border-radius: 3px;
+}
+
+.heroAccum {
+  font-family: var(--font-geist);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245,245,240,0.5);
+}
+
+/* Credit card */
+.memberCard {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 12px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 0;
+  min-height: 200px;
 }
 
-.levelCardTop {
+.memberCardTop {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.levelCardLabel {
-  font-family: var(--font-geist);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(245,245,240,0.35);
+.memberCardBrand {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #A855F7;
+}
+
+.memberCardLevel {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(245,245,240,0.45);
+}
+
+.memberCardPts {
+  font-family: var(--font-anton);
+  font-size: 52px;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.memberCardCaption {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(245,245,240,0.4);
+  margin-bottom: 20px;
+}
+
+.memberCardBar {
+  height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.memberCardBarFill {
+  height: 100%;
+  width: 62%;
+  background: #A855F7;
+  border-radius: 2px;
+}
+
+.memberCardHolder {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(245,245,240,0.4);
+  margin-top: auto;
 }
 
 .levelBadge {
@@ -65,60 +154,6 @@
   color: var(--purple);
   border: 1px solid rgba(168,85,247,0.3);
   border-radius: 3px;
-}
-
-.levelPts {
-  font-family: var(--font-anton);
-  font-size: 52px;
-  color: var(--cream);
-  letter-spacing: -0.02em;
-  line-height: 1;
-}
-
-.levelPtsLabel {
-  font-size: 0.38em;
-  color: var(--cream-muted);
-  letter-spacing: 0.12em;
-  margin-left: 2px;
-  vertical-align: middle;
-}
-
-.levelProgress {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.progressLabels {
-  display: flex;
-  justify-content: space-between;
-  font-family: var(--font-geist);
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(245,245,240,0.3);
-}
-
-.progressBar {
-  height: 3px;
-  background: #1f1f1f;
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.progressFill {
-  height: 100%;
-  width: 62%;
-  background: var(--purple);
-  border-radius: 2px;
-}
-
-.levelNext {
-  font-family: var(--font-geist);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(245,245,240,0.28);
 }
 
 /* Membership levels */

@@ -22,7 +22,7 @@ function ClienteNav() {
   return (
     <nav className={s.nav}>
       <a href="/" className={s.navLogo}>
-        Taller <span className={s.navLogoAccent}>VLD</span>
+        CAR LAB
       </a>
       <div className={s.navRight}>
         <a href="/cliente/dashboard" className={`${s.navLink} ${s.navLinkActive}`}>
@@ -132,7 +132,7 @@ export default function ClienteDashboard() {
       <section className={s.pointsSection}>
         <div className={s.pointsInner}>
           <div className={s.pointsLeft}>
-            <p className={s.pointsTag}>Taller Points</p>
+            <p className={s.pointsTag}>Car Lab Points</p>
             <div className={s.pointsCount}>
               1.240 <span>PTS</span>
             </div>

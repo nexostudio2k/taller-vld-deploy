@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className={s.footer}>
       <div className={s.top}>
         <div className={s.brand}>
-          <span className={s.logo}>Taller VLD</span>
+          <span className={s.logo}>Car Lab</span>
           <span className={s.address}>Calle Industria 47, Valladolid 47009</span>
           <span className={s.hours}>Lun–Vie 08:00–20:00 · Sáb 09:00–14:00</span>
         </div>
@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
 
       <div className={s.bottom}>
-        <span className={s.copy}>© {year} Taller VLD · Todos los derechos reservados</span>
+        <span className={s.copy}>© {year} Car Lab · Todos los derechos reservados</span>
         <span className={s.copy}>Valladolid, España</span>
       </div>
     </footer>

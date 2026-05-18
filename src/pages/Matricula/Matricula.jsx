@@ -49,7 +49,7 @@ function MatriculaNav() {
   return (
     <>
       <nav className={s.nav}>
-        <a href="/" className={s.navLogo}>Taller VLD</a>
+        <a href="/" className={s.navLogo}>Car Lab</a>
         <div className={s.navLinks}>
           <a href="/#servicios">Servicios</a>
           <a href="/presupuesto">Presupuesto</a>
@@ -210,7 +210,7 @@ function MatriculaFooter() {
     <footer className={s.footer}>
       <div className={s.footerTop}>
         <div className={s.footerBrand}>
-          <span className={s.footerLogo}>Taller VLD</span>
+          <span className={s.footerLogo}>Car Lab</span>
           <span className={s.footerAddress}>Calle Industria 47, Madrid 28001</span>
           <span className={s.footerHours}>Lun–Vie 08:00–20:00 · Sáb 09:00–14:00</span>
         </div>
@@ -224,8 +224,8 @@ function MatriculaFooter() {
         </div>
       </div>
       <div className={s.footerBottom}>
-        <span className={s.footerCopy}>© {year} Taller VLD · Todos los derechos reservados</span>
-        <span className={s.footerCopy}>© {year} Taller VLD · Contacto</span>
+        <span className={s.footerCopy}>© {year} Car Lab · Todos los derechos reservados</span>
+        <span className={s.footerCopy}>© {year} Car Lab · Contacto</span>
       </div>
     </footer>
   )

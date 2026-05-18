@@ -174,7 +174,7 @@ export default function Seguimiento() {
     <>
       <section className={s.searchSection}>
         <div className={s.searchInner}>
-          <p className={s.searchTag}>Seguimiento de Reparación · Taller VLD</p>
+          <p className={s.searchTag}>Seguimiento de Reparación · Car Lab</p>
           <h1 className={s.searchHeading}>
             Estado de<br />tu vehículo
           </h1>

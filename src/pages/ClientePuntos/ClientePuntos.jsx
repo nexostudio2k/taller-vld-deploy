@@ -50,31 +50,25 @@ export default function ClientePuntos() {
       {/* Hero — level card + membership table */}
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <p className={s.heroTag}>Portal del Cliente · Taller Points</p>
+          <p className={s.heroTag}>Portal del Cliente · Car Lab Points</p>
+          <h1 className={s.heroHeading}>Car Lab Points</h1>
+          <div className={s.heroBadgeRow}>
+            <span className={s.heroBadge}>NIVEL ACERO</span>
+            <span className={s.heroAccum}>1.240 PTS ACUMULADOS</span>
+          </div>
 
-          {/* Level card */}
-          <div className={s.levelCard}>
-            <div className={s.levelCardTop}>
-              <span className={s.levelCardLabel}>Tu nivel</span>
-              <span className={s.levelBadge}>Acero · Activo</span>
+          {/* Credit card */}
+          <div className={s.memberCard}>
+            <div className={s.memberCardTop}>
+              <span className={s.memberCardBrand}>CAR LAB POINTS</span>
+              <span className={s.memberCardLevel}>★ ACERO</span>
             </div>
-
-            <div className={s.levelPts}>
-              1.240
-              <span className={s.levelPtsLabel}>PTS</span>
+            <div className={s.memberCardPts}>1.240</div>
+            <p className={s.memberCardCaption}>PUNTOS DISPONIBLES</p>
+            <div className={s.memberCardBar}>
+              <div className={s.memberCardBarFill} />
             </div>
-
-            <div className={s.levelProgress}>
-              <div className={s.progressLabels}>
-                <span>Acero</span>
-                <span>Cromo</span>
-              </div>
-              <div className={s.progressBar}>
-                <div className={s.progressFill} />
-              </div>
-            </div>
-
-            <span className={s.levelNext}>760 pts para nivel Cromo</span>
+            <span className={s.memberCardHolder}>CARLOS R. · 4567 XYZ</span>
           </div>
 
           {/* Membership levels */}

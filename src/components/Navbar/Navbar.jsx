@@ -14,7 +14,7 @@ export default function Navbar() {
     <>
       <nav className={s.nav}>
         <a href="/" className={s.logo}>
-          Taller <span className={s.logoAccent}>VLD</span>
+          CAR LAB
         </a>
 
         <div className={s.links}>

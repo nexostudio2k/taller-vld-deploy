@@ -14,7 +14,7 @@ export default function ClienteNav({ active }) {
     <>
       <nav className={s.nav}>
         <a href="/" className={s.logo}>
-          Taller <span className={s.logoAccent}>VLD</span>
+          CAR LAB
         </a>
 
         <div className={s.right}>
