@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import s from './Presupuesto.module.css'
@@ -107,9 +108,9 @@ export default function Presupuesto() {
 
           {/* Right — actions */}
           <div className={s.desgloseRight}>
-            <button className={s.btnReservar}>
+            <Link to="/contacto" className={s.btnReservar}>
               Reservar cita con este presupuesto →
-            </button>
+            </Link>
             <button
               className={s.btnWhatsapp}
               onClick={() => window.open('https://wa.me/34983123456?text=Hola, quiero enviar mi presupuesto ref. %23VLD-2024-0391', '_blank')}

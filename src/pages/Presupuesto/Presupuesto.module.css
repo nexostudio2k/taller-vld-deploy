@@ -279,6 +279,7 @@
 }
 
 .btnReservar {
+  display: block;
   font-family: var(--font-inter);
   font-size: 11px;
   font-weight: 700;

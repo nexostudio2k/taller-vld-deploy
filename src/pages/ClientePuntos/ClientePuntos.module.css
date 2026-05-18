@@ -387,7 +387,7 @@
   white-space: nowrap;
 }
 
-.movPtsPos { color: #4ADE80; }
+.movPtsPos { color: #1A7A4A; }
 .movPtsNeg { color: var(--red); }
 
 /* ── Redeem Section (light) ── */
@@ -433,7 +433,7 @@
 .redeemPts {
   font-family: var(--font-anton);
   font-size: 32px;
-  color: var(--cream);
+  color: #A855F7;
   letter-spacing: -0.01em;
   line-height: 1;
 }
@@ -447,7 +447,7 @@
 
 .redeemDesc {
   font-size: 13px;
-  color: var(--cream-muted);
+  color: #B8B8B8;
   line-height: 1.55;
   flex: 1;
 }
