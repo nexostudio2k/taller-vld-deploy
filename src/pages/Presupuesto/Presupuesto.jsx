@@ -79,11 +79,6 @@ export default function Presupuesto() {
               <p className={s.priceNote}>Estimación · IVA incluido</p>
             </div>
 
-            <div className={s.actions}>
-              <button className={s.btnAccept}>Aceptar presupuesto</button>
-              <button className={s.btnReject}>Rechazar / Solicitar cambios</button>
-              <span className={s.validNote}>// Presupuesto válido 15 días · Ref. #VLD-2024-0391</span>
-            </div>
           </div>
         </div>
       </section>
@@ -91,34 +86,39 @@ export default function Presupuesto() {
       {/* Desglose */}
       <section className={s.desglose}>
         <div className={s.desgloseInner}>
-          <div className={s.desgloseHeader}>
+
+          {/* Left — itemized breakdown */}
+          <div className={s.desgloseLeft}>
             <h2 className={s.desgloseTitle}>Desglose estimado</h2>
-            <div className={s.desgloseMeta}>
-              <span className={s.desgloseShop}>Car Lab</span>
-              <span className={s.desgloseTotal}>
-                Estimación total: <span>180€ – 339€</span>
-              </span>
+            <div className={s.lineItems}>
+              {LINE_ITEMS.map(({ label, price }) => (
+                <div key={label} className={s.lineItem}>
+                  <span className={s.lineLabel}>{label}</span>
+                  <span className={s.linePrice}>{price}</span>
+                </div>
+              ))}
+            </div>
+            <div className={s.divider} />
+            <div className={s.lineItemTotal}>
+              <span className={s.totalLabel}>TOTAL</span>
+              <span className={s.totalPrice}>180€ – 339€</span>
             </div>
           </div>
 
-          <div className={s.lineItems}>
-            {LINE_ITEMS.map(({ label, desc, price }) => (
-              <div key={label} className={s.lineItem}>
-                <div className={s.lineLeft}>
-                  <span className={s.lineLabel}>{label}</span>
-                  <span className={s.lineDesc}>{desc}</span>
-                </div>
-                <span className={s.linePrice}>{price}</span>
-              </div>
-            ))}
+          {/* Right — actions */}
+          <div className={s.desgloseRight}>
+            <button className={s.btnReservar}>
+              Reservar cita con este presupuesto →
+            </button>
+            <button
+              className={s.btnWhatsapp}
+              onClick={() => window.open('https://wa.me/34983123456?text=Hola, quiero enviar mi presupuesto ref. %23VLD-2024-0391', '_blank')}
+            >
+              Enviar por WhatsApp
+            </button>
+            <p className={s.validNote}>Presupuesto válido 15 días · Sin compromiso</p>
           </div>
 
-          <div className={s.divider} />
-
-          <div className={s.lineItemTotal}>
-            <span className={s.totalLabel}>Total estimado (IVA incl.)</span>
-            <span className={s.totalPrice}>180€ – 339€</span>
-          </div>
         </div>
       </section>
 

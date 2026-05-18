@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Camera, MessageCircle, MapPin } from 'lucide-react'
 import s from './Footer.module.css'
 
@@ -23,7 +24,7 @@ export default function Footer() {
             <a href="/presupuesto">Presupuesto</a>
             <a href="/matricula">Matrícula</a>
             <a href="/cliente">Portal Cliente</a>
-            <a href="/#contacto" id="contacto">Contacto</a>
+            <Link to="/contacto">Contacto</Link>
           </nav>
         </div>
 

@@ -69,9 +69,9 @@
 
 /* ── Estimate Section ── */
 .estimateSection {
-  background: var(--bg);
+  background: #F5F5F0;
   padding: 56px 32px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #D4D4CE;
 }
 
 .estimateInner {
@@ -126,7 +126,7 @@
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--cream-muted);
+  color: #555550;
 }
 
 .vehicleTag::before {
@@ -138,14 +138,14 @@
   font-family: var(--font-anton);
   font-size: clamp(20px, 2.5vw, 26px);
   text-transform: uppercase;
-  color: var(--cream);
+  color: #0D0D0D;
   letter-spacing: -0.01em;
   line-height: 1.1;
 }
 
 .serviceDesc {
   font-size: 13px;
-  color: var(--cream-muted);
+  color: #555550;
   line-height: 1.6;
   max-width: 420px;
 }
@@ -160,7 +160,7 @@
 .price {
   font-family: var(--font-anton);
   font-size: clamp(36px, 4.5vw, 52px);
-  color: var(--cream);
+  color: #0D0D0D;
   letter-spacing: -0.02em;
   line-height: 1;
 }
@@ -168,7 +168,7 @@
 .priceSep {
   font-family: var(--font-geist);
   font-size: 18px;
-  color: var(--cream-muted);
+  color: #888;
 }
 
 .priceNote {
@@ -176,66 +176,10 @@
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--cream-muted);
+  color: #888;
   margin-top: 4px;
 }
 
-.actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 360px;
-}
-
-.btnAccept {
-  font-family: var(--font-inter);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 15px 24px;
-  background: var(--red);
-  color: var(--cream);
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
-  text-align: center;
-}
-
-.btnAccept:hover {
-  background: var(--red-hover);
-  transform: translateY(-1px);
-}
-
-.btnReject {
-  font-family: var(--font-inter);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 14px 24px;
-  background: none;
-  color: var(--cream-muted);
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
-  text-align: center;
-}
-
-.btnReject:hover {
-  border-color: rgba(245,245,240,0.4);
-  color: var(--cream);
-}
-
-.validNote {
-  font-family: var(--font-geist);
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(245,245,240,0.25);
-}
 
 /* ── Desglose Section ── */
 .desglose {
@@ -246,17 +190,15 @@
 .desgloseInner {
   max-width: 1120px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
 }
 
-.desgloseHeader {
+.desgloseLeft {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: column;
 }
 
 .desgloseTitle {
@@ -265,32 +207,7 @@
   text-transform: uppercase;
   color: var(--cream);
   letter-spacing: -0.01em;
-}
-
-.desgloseMeta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 3px;
-}
-
-.desgloseShop {
-  font-family: var(--font-geist);
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--cream-muted);
-}
-
-.desgloseTotal {
-  font-family: var(--font-anton);
-  font-size: 24px;
-  color: var(--cream);
-  letter-spacing: 0;
-}
-
-.desgloseTotal span {
-  color: var(--red);
+  margin-bottom: 28px;
 }
 
 .lineItems {
@@ -303,32 +220,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 13px 0;
   border-bottom: 1px solid var(--border);
   gap: 16px;
 }
 
-.lineItem:last-child {
-  border-bottom: none;
-}
-
-.lineLeft {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
 .lineLabel {
+  font-family: var(--font-inter);
   font-size: 14px;
-  font-weight: 500;
-  color: var(--cream);
-}
-
-.lineDesc {
-  font-size: 12px;
+  font-weight: 400;
   color: var(--cream-muted);
-  font-family: var(--font-geist);
-  letter-spacing: 0.04em;
 }
 
 .linePrice {
@@ -344,7 +245,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0 0;
+  padding: 16px 0 0;
   gap: 16px;
 }
 
@@ -366,7 +267,64 @@
 .divider {
   height: 1px;
   background: var(--border);
-  margin: 24px 0;
+  margin: 20px 0 0;
+}
+
+/* ── Desglose right ── */
+.desgloseRight {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.btnReservar {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 20px;
+  background: var(--red);
+  color: var(--cream);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: left;
+}
+
+.btnReservar:hover {
+  background: var(--red-hover);
+}
+
+.btnWhatsapp {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  background: none;
+  color: var(--cream);
+  border: 1px solid rgba(245,245,240,0.25);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  text-align: left;
+}
+
+.btnWhatsapp:hover {
+  border-color: var(--cream);
+  background: rgba(245,245,240,0.05);
+}
+
+.validNote {
+  font-family: var(--font-geist);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(245,245,240,0.28);
+  margin-top: 4px;
 }
 
 /* ── Completion Stamp ── */
@@ -451,13 +409,9 @@
     padding: 36px 20px;
   }
 
-  .desgloseHeader {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .desgloseMeta {
-    align-items: flex-start;
+  .desgloseInner {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
 
   .stamp {
