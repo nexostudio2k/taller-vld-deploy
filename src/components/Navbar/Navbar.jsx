@@ -1,13 +1,27 @@
 import { useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import s from './Navbar.module.css'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const { user } = useAuth()
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  function handleServicios(e) {
+    e.preventDefault()
+    if (location.pathname === '/') {
+      document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate('/')
+      setTimeout(() => {
+        document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    }
+  }
 
   const NAV_LINKS = [
-    { label: 'Servicios', href: '#servicios' },
     { label: 'Presupuesto', href: '/presupuesto' },
     { label: 'Mi Portal', href: '/cliente' },
   ]
@@ -18,6 +32,7 @@ export default function Navbar() {
         <a href="/" className={s.logo}>CAR LAB</a>
 
         <div className={s.links}>
+          <a href="#servicios" onClick={handleServicios}>Servicios</a>
           {NAV_LINKS.map(({ label, href }) => (
             <a key={label} href={href}>{label}</a>
           ))}
@@ -36,6 +51,7 @@ export default function Navbar() {
       </nav>
 
       <div className={`${s.mobileMenu} ${open ? s.visible : ''}`}>
+        <a href="#servicios" onClick={e => { handleServicios(e); setOpen(false) }}>Servicios</a>
         {NAV_LINKS.map(({ label, href }) => (
           <a key={label} href={href} onClick={() => setOpen(false)}>{label}</a>
         ))}
