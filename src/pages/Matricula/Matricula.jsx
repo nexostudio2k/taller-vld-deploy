@@ -21,8 +21,8 @@ function MatriculaNav() {
         <a href="/" className={s.navLogo}>Taller VLD</a>
         <div className={s.navLinks}>
           <a href="/#servicios">Servicios</a>
-          <a href="/matricula">Presupuesto</a>
-          <a href="/#contacto">Mi Portal</a>
+          <a href="/presupuesto">Presupuesto</a>
+          <a href="/cliente/dashboard">Mi Portal</a>
         </div>
         <a href="/#contacto" className={s.navCta}>Contacto</a>
         <button
@@ -35,8 +35,8 @@ function MatriculaNav() {
       </nav>
       <div className={`${s.mobileMenu} ${open ? s.open : ''}`}>
         <a href="/#servicios" onClick={() => setOpen(false)}>Servicios</a>
-        <a href="/matricula" onClick={() => setOpen(false)}>Presupuesto</a>
-        <a href="/#contacto" onClick={() => setOpen(false)}>Mi Portal</a>
+        <a href="/presupuesto" onClick={() => setOpen(false)}>Presupuesto</a>
+        <a href="/cliente/dashboard" onClick={() => setOpen(false)}>Mi Portal</a>
         <a href="/#contacto" className={s.mobileCta} onClick={() => setOpen(false)}>Contacto</a>
       </div>
     </>
@@ -178,7 +178,7 @@ function MatriculaFooter() {
           <span className={s.footerPhone}>+34 91 234 56 78</span>
           <nav className={s.footerNav}>
             <a href="/#servicios">Servicios</a>
-            <a href="/matricula">Presupuesto</a>
+            <a href="/presupuesto">Presupuesto</a>
             <a href="/#contacto">Contacto</a>
           </nav>
         </div>

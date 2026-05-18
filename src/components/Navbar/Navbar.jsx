@@ -3,8 +3,8 @@ import s from './Navbar.module.css'
 
 const NAV_LINKS = [
   { label: 'Servicios', href: '#servicios' },
-  { label: 'Presupuesto', href: '/matricula' },
-  { label: 'Mi Portal', href: '/matricula' },
+  { label: 'Presupuesto', href: '/presupuesto' },
+  { label: 'Mi Portal', href: '/cliente/dashboard' },
 ]
 
 export default function Navbar() {

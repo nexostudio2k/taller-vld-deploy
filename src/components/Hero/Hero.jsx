@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import s from './Hero.module.css'
 
 export default function Hero() {
@@ -16,13 +17,13 @@ export default function Hero() {
         </h1>
 
         <div className={s.actions}>
-          <a href="/matricula" className={s.btnPrimary}>
+          <Link to="/presupuesto" className={s.btnPrimary}>
             Pedir Presupuesto
             <ArrowRight size={14} strokeWidth={2.5} />
-          </a>
-          <a href="/matricula" className={s.btnSecondary}>
+          </Link>
+          <Link to="/cliente/dashboard" className={s.btnSecondary}>
             Ver mi reparación
-          </a>
+          </Link>
         </div>
       </div>
     </section>

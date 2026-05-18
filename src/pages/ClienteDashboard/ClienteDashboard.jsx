@@ -29,7 +29,7 @@ function ClienteNav() {
           Mi Reparación
         </a>
         <a href="#" className={s.navLink}>Historial</a>
-        <a href="#" className={s.navLink}>Puntos</a>
+        <a href="/cliente/puntos" className={s.navLink}>Puntos</a>
         <a href="#" className={s.navUser}>Carlos R</a>
         <button className={s.hamburger} aria-label="Menú">
           <span /><span /><span />
@@ -147,7 +147,7 @@ export default function ClienteDashboard() {
             <p className={s.levelDesc}>
               5% descuento en todos los servicios. Prioridad en citas.
             </p>
-            <a href="#" className={s.levelCta}>
+            <a href="/cliente/puntos" className={s.levelCta}>
               Ver mis puntos
               <ArrowRight size={13} strokeWidth={2.5} />
             </a>
