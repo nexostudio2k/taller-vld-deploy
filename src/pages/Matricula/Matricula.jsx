@@ -7,31 +7,31 @@ const VEHICLES = [
     name: 'Volkswagen Golf',
     spec: '2.0 TDI · 150 CV · 2018',
     detail: 'Diesel · Hatchback · 1968 cc',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/2017_Volkswagen_Golf_GTD_5-door_%28facelift%2C_grey%29%2C_front_8.15.19.jpg/1280px-2017_Volkswagen_Golf_GTD_5-door_%28facelift%2C_grey%29%2C_front_8.15.19.jpg',
+    img: '/images/golf.jpg',
   },
   {
     name: 'Seat León',
     spec: '1.5 TSI · 130 CV · 2019',
     detail: 'Gasolina · Hatchback · 1498 cc',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/2017_SEAT_Le%C3%B3n_FR_TDI_150_5-door_2.0.jpg/1280px-2017_SEAT_Le%C3%B3n_FR_TDI_150_5-door_2.0.jpg',
+    img: '/images/seat.webp',
   },
   {
     name: 'Toyota Corolla',
     spec: '1.8 Hybrid · 122 CV · 2020',
     detail: 'Híbrido · Sedan · 1798 cc',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg/1280px-2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg',
+    img: '/images/corolla.jpg',
   },
   {
     name: 'Renault Megane',
     spec: '1.5 dCi · 110 CV · 2017',
     detail: 'Diesel · Hatchback · 1461 cc',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/2016_Renault_M%C3%A9gane_IV_GT_Line_TCe_130.jpg/1280px-2016_Renault_M%C3%A9gane_IV_GT_Line_TCe_130.jpg',
+    img: '/images/megane.avif',
   },
   {
     name: 'Ford Focus',
     spec: '1.0 EcoBoost · 125 CV · 2021',
     detail: 'Gasolina · Hatchback · 999 cc',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/2018_Ford_Focus_ST-Line_1.5.jpg/1280px-2018_Ford_Focus_ST-Line_1.5.jpg',
+    img: '/images/focus.png',
   },
 ]
 
